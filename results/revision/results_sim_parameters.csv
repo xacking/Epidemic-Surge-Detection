@@ -1,0 +1,21 @@
+parameter,value,notes
+Model,"Seasonal stochastic SEIRS, daily tau-leap (binomial transitions)","60 populations per replicate; 8 years + 60 days simulated in total, of which 425 days burn-in"
+Population N,"Uniform(2e5, 2e6)",per region
+Basic reproduction number R0,"Uniform(1.3, 2.2)",per region
+Seasonal forcing amplitude,"Uniform(0.15, 0.35)",cosine forcing with uniform random phase (0-365 d)
+Season-to-season transmissibility,"Lognormal(0, 0.12)",multiplier per year and region (strain variability)
+Latent period 1/sigma,2 days,
+Infectious period 1/gamma,4 days,
+Waning immunity 1/omega,400 days,
+Initial susceptible fraction,0.6,E0 = I0 = 50
+Importations,Poisson(0.5) per day,
+Reporting fraction rho,"Uniform(0.02, 0.10)","per region; weekly lognormal(0, 0.25) variation"
+Reporting noise,"Negative binomial, k = 5",
+Reported-stream delay d_rep,3 + advantage days,
+Second-stream delay d_dig,3 days,
+Second-stream advantage,"0, 3, 7, 14, 21 days",grid
+Second-stream noise sigma,"0.1, 0.3, 0.6, 1.2 (lognormal, multiplicative)",grid
+Spurious bursts,"Poisson(2 per year); length 7–27 d; height Uniform(5, 40) per 100k",unrelated to incidence
+Label,"H = 3, R = 1.5, A = 2 per 100k",same rule as the real data
+Detector,"LightGBM, 300 trees, population-held-out 5-fold CV",
+Replicates,2 per grid cell (seeds 0 and 1),"between-replicate difference: mean lead max 0.25 wk (median 0.08), PR-AUC gain max 0.011; ~381 paired episodes per cell"

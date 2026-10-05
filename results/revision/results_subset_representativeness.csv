@@ -1,0 +1,4 @@
+subset,countries,country_weeks,base_rate,median_weeks_per_country,median_weekly_specimens,Africa,Americas,E. Mediterranean,Europe,SE Asia,W. Pacific
+Full influenza panel,131,61062,0.229,455,94,22,25,17,44,8,15
+Google Trends subset,74,38223,0.21,498,134,4,19,11,29,2,9
+Syndromic ILI subset,60,11699,0.246,163,76,21,14,5,7,6,7

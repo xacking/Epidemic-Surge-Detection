@@ -1,0 +1,14 @@
+# raw inputs and large intermediates (regenerate with the scripts)
+data/
+trends_raw/
+preds/
+*.parquet
+*.log
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+
+# secrets
+.tabpfn_token
+*.token
+.env

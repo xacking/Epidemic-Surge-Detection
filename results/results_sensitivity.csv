@@ -1,0 +1,9 @@
+disease,definition,countries,prevalence,growth,expgrowth,logreg,lgbm
+flu,H=2 wk,132,0.172,0.266,0.317,0.307,0.526
+flu,H=3 wk (primary),131,0.229,0.333,0.39,0.396,0.615
+flu,H=4 wk,129,0.275,0.381,0.439,0.464,0.673
+flu,"H=3, strict (R=2, larger floor)",131,0.105,0.171,0.223,0.236,0.461
+covid,H=2 wk,132,0.162,0.521,0.556,0.557,0.696
+covid,H=3 wk (primary),137,0.209,0.538,0.56,0.571,0.709
+covid,H=4 wk,144,0.244,0.543,0.56,0.574,0.712
+covid,"H=3, strict (R=2, larger floor)",123,0.135,0.417,0.428,0.445,0.614
